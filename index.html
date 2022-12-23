@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <title>Family Member Recogniser</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+   <link rel="stylesheet" href="style.css">
+
+  </head>
+  <body>
+    <center>
+        <h1 class="btn btn-default heading">Family Member Recogniser</h1>
+        <br>
+        <h3>
+          This model is trained to identify:
+        </h3>
+        <br>
+        <b>
+          <hr>
+          Son
+          <hr>
+          Father
+          <hr>
+          Mother
+          <hr>
+        </b>
+        <br>
+        <br>
+        <div id="webcam">
+          <h5>Webcam goes here</h5>
+        </div>
+        <div id="picture">
+          Picture goes here
+        </div>
+              <button class="btn btn-info" onclick="take_snapshot()">Take Picture</button>
+      <br> <br>
+      <button class="btn btn-danger" onclick="identify_snapshot()">Identify who you are</button>
+      <br>
+      <br>
+      <p style="font-size: 22px;">Person : <span id="result_person_name"></span> </p>
+      <p style="font-size: 22px;">Accuracy : <span id="result_person_accuracy"></span> </p>
+
+      <button class="btn btn-default heading" id="btn-warning" onclick="btn_warning_func()">Warnings Page</button>
+    </center>
+    <script src="main.js"></script>
+  </body>
